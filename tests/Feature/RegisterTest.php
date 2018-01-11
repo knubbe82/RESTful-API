@@ -2,10 +2,13 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+
 
 class RegisterTest extends TestCase
 {
+    use RefreshDatabase;
     public function testsRegistersSuccessfully()
     {
         $payload = [

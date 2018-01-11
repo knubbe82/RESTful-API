@@ -4,10 +4,12 @@ namespace Tests\Feature;
 
 use App\Article;
 use App\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class ArticleTest extends TestCase
 {
+    use RefreshDatabase;
     public function testsArticlesAreCreatedCorrectly()
     {
         $user = factory(User::class)->create();
